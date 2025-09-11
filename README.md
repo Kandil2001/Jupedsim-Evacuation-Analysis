@@ -4,7 +4,6 @@
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
 ![Jupedsim](https://img.shields.io/badge/Jupedsim-0.2.0-green.svg)
-![Optimized](https://img.shields.io/badge/Optimized-Performance-orange.svg)
 
 **High-performance pedestrian evacuation simulation with parallel processing and numba acceleration**
 
