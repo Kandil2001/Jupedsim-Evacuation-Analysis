@@ -48,3 +48,5 @@ This project implements a highly optimized pedestrian evacuation simulation usin
 
 ```bash
 pip install shapely pathlib matplotlib jupedsim pedpy numpy numba
+```
+
