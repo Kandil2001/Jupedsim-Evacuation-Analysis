@@ -47,7 +47,7 @@ This foundational model treats pedestrians as particles influenced by virtual fo
 - **Repulsive forces** push them away from obstacles and other people.
 - The combination of these forces governs movement patterns.
 
-![Social Force Model](https://upload.wikimedia.org/wikipedia/commons/4/4e/Social_force_model_diagram.png)
+![Social Force Model](./figures/social_force_model.png)
 
 In this diagram:
 - Arrows represent directional forces acting on a pedestrian.
@@ -59,7 +59,7 @@ In this diagram:
 
 When many agents attempt to pass through a narrow exit, congestion forms. This is known as **bottleneck behavior**, and it’s critical in evacuation planning.
 
-![Bottleneck Evacuation](https://commons.wikimedia.org/wiki/File:Collective_crowd_patterns_Bottleneck_experiment_Participants_passing_through_a_bottleneck_during_a_simple_evacuation_situation_Moussa%C3%AFd_%26_al._2016_Figure1.jpg)
+![Bottleneck Behavior](./figures/bottleneck_example.png)
 
 This image shows participants in a controlled evacuation experiment. Notice how density increases near the bottleneck, slowing overall flow.
 
@@ -69,7 +69,7 @@ This image shows participants in a controlled evacuation experiment. Notice how 
 
 Heatmaps visualize crowd density and movement intensity across a space. They’re used to identify high-traffic zones and optimize layouts.
 
-![Pedestrian Flow Heatmap](https://www.isarsoft.com/_next/image?url=https%3A%2F%2Fisarsoft.com%2F_images%2Farticles%2Fheatmap-traffic-flow.png&w=1080&q=75)
+![Pedestrian Flow Heatmap](./figures/pedestrian_heatmap.png)
 
 In this example:
 - Red zones indicate high pedestrian density.
