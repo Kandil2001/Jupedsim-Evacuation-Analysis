@@ -13,16 +13,18 @@
 
 ## Table of Contents
 
-- Overview  
-- Theoretical Background  
-- Real-World Applications  
-- Ethical Considerations  
-- Features  
-- Quick Start  
-- Installation  
-- Project Structure  
-- Contributing  
-- License
+## Table of Contents
+
+- [Overview](#overview)  
+- [Theoretical Background](#theoretical-background)  
+- [Real-World Applications](#real-world-applications)  
+- [Ethical Considerations](#ethical-considerations)  
+- [Features](#features)  
+- [Quick Start](#quick-start)  
+- [Installation](#installation)  
+- [Project Structure](#project-structure)  
+- [Contributing](#contributing)  
+- [License](#license)
 
 ---
 
@@ -106,7 +108,7 @@ pip install jupedsim pedpy numba
 ---
 
 ## Project Structure
-
+```
 ├── Ped1 - Copy.ipynb         # Main simulation notebook  
 ├── HC.wkt                    # Building geometry  
 ├── requirements.txt          # Dependencies  
@@ -115,7 +117,7 @@ pip install jupedsim pedpy numba
 ├── docs/                     # Optional documentation  
 ├── figures/                  # Reserved for future visual assets  
 ├── *.sqlite                  # Output trajectory files (optional)
-
+```
 ---
 
 ## Contributing
