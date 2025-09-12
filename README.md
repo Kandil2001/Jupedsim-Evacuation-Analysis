@@ -11,8 +11,6 @@
 
 ## Table of Contents
 
-## Table of Contents
-
 - [Overview](#overview)  
 - [Theoretical Background](#theoretical-background)  
 - [Real-World Applications](#real-world-applications)  
@@ -47,10 +45,7 @@ This foundational model treats pedestrians as particles influenced by virtual fo
 
 ![Social Force Model](./figures/social_force_model.png)
 
-In this diagram:
-- Arrows represent directional forces acting on a pedestrian.
-- The person adjusts their path based on nearby agents, walls, and their destination.
-
+This image overlays the Social Force Model onto a real urban crowd scene, demonstrating how pedestrians navigate complex environments.
 ---
 
 ### 🔹 Bottleneck Behavior
@@ -59,7 +54,7 @@ When many agents attempt to pass through a narrow exit, congestion forms. This i
 
 ![Bottleneck Behavior](./figures/bottleneck_example.png)
 
-This image shows participants in a controlled evacuation experiment. Notice how density increases near the bottleneck, slowing overall flow.
+Captured in a narrow urban corridor under construction, this image illustrates a classic bottleneck scenario in pedestrian dynamics.
 
 ---
 
@@ -69,10 +64,7 @@ Heatmaps visualize crowd density and movement intensity across a space. They’r
 
 ![Pedestrian Flow Heatmap](./figures/pedestrian_heatmap.png)
 
-In this example:
-- Red zones indicate high pedestrian density.
-- Blue zones show low activity.
-- Architects and safety engineers use these maps to redesign space for smoother flow.
+This long-exposure photograph of a bustling city intersection visualizes pedestrian flow and urban complexity.
 
 ---
 
