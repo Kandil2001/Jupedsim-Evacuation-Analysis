@@ -43,9 +43,9 @@ This foundational model treats pedestrians as particles influenced by virtual fo
 - **Repulsive forces** push them away from obstacles and other people.
 - The combination of these forces governs movement patterns.
 
-![Social Force Model](./figures/social_force_model.png)
+![Social Force Model](./figures/social_force_model.png)  
+This visualization shows how pedestrians are influenced by attractive and repulsive forces in a real urban setting.
 
-This image overlays the Social Force Model onto a real urban crowd scene, demonstrating how pedestrians navigate complex environments.
 ---
 
 ### 🔹 Bottleneck Behavior
@@ -53,8 +53,8 @@ This image overlays the Social Force Model onto a real urban crowd scene, demons
 When many agents attempt to pass through a narrow exit, congestion forms. This is known as **bottleneck behavior**, and it’s critical in evacuation planning.
 
 ![Bottleneck Behavior](./figures/bottleneck_example.png)
-
-Captured in a narrow urban corridor under construction, this image illustrates a classic bottleneck scenario in pedestrian dynamics.
+This photo captures a dense crowd navigating a narrow urban corridor under construction.  
+It illustrates bottleneck behavior, where spatial constraints reduce flow efficiency and increase congestion.
 
 ---
 
@@ -63,8 +63,7 @@ Captured in a narrow urban corridor under construction, this image illustrates a
 Heatmaps visualize crowd density and movement intensity across a space. They’re used to identify high-traffic zones and optimize layouts.
 
 ![Pedestrian Flow Heatmap](./figures/pedestrian_heatmap.png)
-
-This long-exposure photograph of a bustling city intersection visualizes pedestrian flow and urban complexity.
+Heatmap showing pedestrian density across a city intersection. Red zones indicate congestion; blue zones show low activity.
 
 ---
 
