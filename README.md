@@ -1,11 +1,10 @@
 # Jupedsim Evacuation Analysis
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
-![Jupedsim](https://img.shields.io/badge/Jupedsim-0.2.0-green.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange.svg)
-![Last Commit](https://img.shields.io/github/last-commit/Kandil2001/Jupedsim-Evacuation-Analysis)
-![Issues](https://img.shields.io/github/issues/Kandil2001/Jupedsim-Evacuation-Analysis)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](#installation)
+[![Jupedsim](https://img.shields.io/badge/Jupedsim-0.2.0-green.svg)](#overview)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](#license)
+[![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange.svg)](#contributing)
+
 
 **High-performance pedestrian evacuation simulation with parallel processing and Numba acceleration**
 
