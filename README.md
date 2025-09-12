@@ -2,9 +2,8 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](#installation)
 [![Jupedsim](https://img.shields.io/badge/Jupedsim-0.2.0-green.svg)](#overview)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](#license)
-[![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange.svg)](#contributing)
-
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange.svg)](CONTRIBUTING.md)
 
 **High-performance pedestrian evacuation simulation with parallel processing and Numba acceleration**
 
@@ -151,7 +150,7 @@ pip install jupedsim pedpy numba
 ```
 ---
 
-## Contributing
+## [Contributing](CONTRIBUTING.md)
 
 Pull requests are welcome. Please:
 
@@ -161,6 +160,7 @@ Pull requests are welcome. Please:
 
 ---
 
-## License
+## [License](LICENSE)
 
-MIT License. See `LICENSE` for details.
+MIT License. See the full license text [here](LICENSE).
+
