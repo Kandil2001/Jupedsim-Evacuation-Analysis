@@ -9,7 +9,7 @@
 
 </div>
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -22,11 +22,11 @@
 - [Acknowledgments](#acknowledgments)
 - [License](#license)
 
-## 📖 Overview
+## Overview
 
 This project implements a highly optimized pedestrian evacuation simulation using Jupedsim with advanced performance enhancements including parallel processing, numba acceleration, and vectorized operations. The simulation models complex evacuation scenarios with thousands of agents while maintaining computational efficiency.
 
-## ✨ Features
+## Features
 
 - **Parallel agent distribution** using ThreadPoolExecutor
 - **Numba-accelerated distance calculations** for nearest exit computation
@@ -37,7 +37,7 @@ This project implements a highly optimized pedestrian evacuation simulation usin
 - **Progress reporting** during simulation execution
 - **Batch agent addition** for improved performance
 
-## 🛠 Installation
+## Installation
 
 ### Prerequisites
 - Python 3.8+
