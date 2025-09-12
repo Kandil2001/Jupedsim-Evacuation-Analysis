@@ -37,24 +37,56 @@ This project provides a robust and highly optimized framework for **pedestrian e
 
 ## Theoretical Background
 
-Pedestrian dynamics is a multidisciplinary field combining physics, behavioral science, and computational modeling. Key concepts include:
+Pedestrian dynamics is the study of how individuals and crowds move through space. It blends physics, behavioral psychology, and computational modeling to simulate realistic movement—especially in evacuation scenarios.
 
-- **Social Force Model**: Pedestrians are influenced by forces—toward exits, away from obstacles, and from other agents.  
-  ![Social Force Model](https://upload.wikimedia.org/wikipedia/commons/4/4e/Social_force_model_diagram.png)
+### 🔹 Social Force Model
 
-- **Microscopic vs. Macroscopic Models**:  
-  - *Microscopic*: Simulates each pedestrian individually  
-  - *Macroscopic*: Treats crowds as fluid-like entities
+This foundational model treats pedestrians as particles influenced by virtual forces:
 
-- **Bottleneck Behavior**:  
-  ![Bottleneck Simulation](https://upload.wikimedia.org/wikipedia/commons/1/1e/Bottleneck_simulation.png)  
-  Narrow exits cause congestion and delay; modeling helps optimize layouts.
+- **Attractive forces** pull individuals toward goals (e.g., exits).
+- **Repulsive forces** push them away from obstacles and other people.
+- The combination of these forces governs movement patterns.
 
-- **Density & Flow Rate**:  
-  ![Crowd Density Heatmap](https://upload.wikimedia.org/wikipedia/commons/7/7f/Crowd_density_heatmap.png)  
-  These metrics are critical for evaluating evacuation performance.
+![Social Force Model](https://upload.wikimedia.org/wikipedia/commons/4/4e/Social_force_model_diagram.png)
 
-JuPedSim is an open-source framework enabling detailed pedestrian simulations using XML-based scenario definitions. It supports routing algorithms, geometry configurations, and agent behaviors.
+In this diagram:
+- Arrows represent directional forces acting on a pedestrian.
+- The person adjusts their path based on nearby agents, walls, and their destination.
+
+---
+
+### 🔹 Bottleneck Behavior
+
+When many agents attempt to pass through a narrow exit, congestion forms. This is known as **bottleneck behavior**, and it’s critical in evacuation planning.
+
+![Bottleneck Evacuation](https://commons.wikimedia.org/wiki/File:Collective_crowd_patterns_Bottleneck_experiment_Participants_passing_through_a_bottleneck_during_a_simple_evacuation_situation_Moussa%C3%AFd_%26_al._2016_Figure1.jpg)
+
+This image shows participants in a controlled evacuation experiment. Notice how density increases near the bottleneck, slowing overall flow.
+
+---
+
+### 🔹 Pedestrian Flow Heatmaps
+
+Heatmaps visualize crowd density and movement intensity across a space. They’re used to identify high-traffic zones and optimize layouts.
+
+![Pedestrian Flow Heatmap](https://www.isarsoft.com/_next/image?url=https%3A%2F%2Fisarsoft.com%2F_images%2Farticles%2Fheatmap-traffic-flow.png&w=1080&q=75)
+
+In this example:
+- Red zones indicate high pedestrian density.
+- Blue zones show low activity.
+- Architects and safety engineers use these maps to redesign space for smoother flow.
+
+---
+
+### 🔹 Microscopic vs. Macroscopic Models
+
+- **Microscopic models** simulate each pedestrian individually, capturing detailed interactions.
+- **Macroscopic models** treat crowds as continuous flows, similar to fluids—useful for large-scale analysis.
+
+---
+
+JuPedSim supports these modeling approaches and allows researchers to define building layouts, spawn zones, and exit strategies using XML and WKT formats. It’s widely used in safety engineering, urban planning, and evacuation research.
+
 
 ---
 
