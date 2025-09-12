@@ -1,7 +1,7 @@
 # Jupedsim Evacuation Analysis
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](#installation)
-[![Jupedsim](https://img.shields.io/badge/Jupedsim-0.2.0-green.svg)](#overview)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![Jupedsim](https://img.shields.io/badge/Jupedsim-0.2.0-green.svg)](https://www.jupedsim.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange.svg)](CONTRIBUTING.md)
 
