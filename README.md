@@ -1,3 +1,5 @@
+<div style="border: 1px solid #ddd; padding: 20px; margin-bottom: 20px; border-radius: 8px;">
+
 # Jupedsim Evacuation Analysis
 
 <div align="center">
@@ -34,27 +36,51 @@
 
 ## Overview
 
-This project implements a highly optimized pedestrian evacuation simulation using Jupedsim with advanced performance enhancements including parallel processing, numba acceleration, and vectorized operations. The simulation models complex evacuation scenarios with thousands of agents while maintaining computational efficiency.
+This project provides a robust and highly optimized framework for **pedestrian evacuation analysis** using the **Jupedsim** library. By leveraging advanced performance techniques like **parallel processing** with `ThreadPoolExecutor`, **Numba acceleration**, and **vectorized operations**, the simulation can efficiently model complex evacuation scenarios involving thousands of agents. The codebase is designed for both researchers and practitioners who need to analyze human behavior in emergency situations without being limited by computational constraints.
 
 ## Features
 
-- **Parallel agent distribution** using ThreadPoolExecutor
-- **Numba-accelerated distance calculations** for nearest exit computation
-- **Vectorized operations** for efficient geometric calculations
-- **Caching mechanism** for geometry loading
-- **Memory-efficient position processing**
-- **Optimized visualization** with reduced rendering overhead
-- **Progress reporting** during simulation execution
-- **Batch agent addition** for improved performance
+This project includes several key optimizations to ensure high-performance simulation:
+
+* 🚀 **Parallel Agent Distribution**: Utilizes `ThreadPoolExecutor` to distribute agent spawning across multiple CPU cores, dramatically reducing setup time for large-scale simulations.
+* 💨 **Numba-Accelerated Calculations**: Compiles critical functions, such as finding the nearest exit, to machine code using **Numba**, resulting in significant speed improvements.
+* 🧠 **Smart Caching**: Implements an `lru_cache` for geometry files, ensuring the building layout is loaded from disk only once, even if called multiple times.
+* 📊 **Efficient Data Handling**: Uses **vectorized NumPy operations** for fast, memory-efficient distance calculations and geometric manipulations.
+* 🖼️ **Optimized Visualization**: Includes a streamlined plotting function that uses NumPy arrays to reduce rendering overhead and efficiently visualize the simulation setup.
+* 📝 **Progress Reporting**: Provides real-time updates on simulation progress, which is particularly useful for long-running scenarios.
+* 🏃 **Batch Agent Addition**: Agents are added in batches per spawn area to enhance the efficiency of the simulation setup.
 
 ## Quick Start
 
-1. **Clone the repository**
-2. **Install dependencies**
-3. **Run the simulation**
-4. **Execute all cells** to see the evacuation simulation in action!
+Get started with the simulation in just a few steps:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/Kandil2001/Jupedsim-Evacuation-Analysis.git](https://github.com/Kandil2001/Jupedsim-Evacuation-Analysis.git)
+    cd Jupedsim-Evacuation-Analysis
+    ```
+2.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+3.  **Run the simulation:**
+    Open the `Ped1 ` Jupyter Notebook.
+4.  **Execute all cells** to see the evacuation simulation in action, from setup to final animation.
 
 ## Installation
+
+### Prerequisites
+
+* Python 3.8+
+* Jupyter Notebook
+
+### Dependencies
+
+Install the required packages using pip:
+
+```bash
+pip install jupedsim pedpy shapely numpy matplotlib numba
+```
 
 ### Prerequisites
 - Python 3.8+
