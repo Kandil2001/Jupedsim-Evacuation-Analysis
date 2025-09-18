@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.jupedsim.org/">
-    <img src="https://raw.githubusercontent.com/JuPedSim/jpscore/develop/docs/images/logo.png" alt="JuPedSim Logo" width="160" style="margin-right: 40px;">
+    <img src="assets/jupedsim_logo.png" alt="JuPedSim Logo" width="160" style="margin-right: 40px;">
   </a>
   <a href="https://www.python.org/">
     <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" alt="Python Logo" width="200">
@@ -11,7 +11,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)  
 [![Jupedsim](https://img.shields.io/badge/JuPedSim-0.2.0-green.svg)](https://www.jupedsim.org/)  
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
-[![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange.svg)](CONTRIBUTING.md)
+[![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange.svg)](CONTRIBUTING.md)  
 
 ## 🚨 High-performance pedestrian evacuation simulation with parallel processing & Numba acceleration
 <p align="center">
