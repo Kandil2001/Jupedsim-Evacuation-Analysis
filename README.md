@@ -1,6 +1,10 @@
 <p align="center">
-  <img src="https://www.jupedsim.org/assets/images/logo.png" alt="JuPedSim Logo" width="160" style="margin-right: 40px;">
-  <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" alt="Python Logo" width="200">
+  <a href="https://www.jupedsim.org/">
+    <img src="https://www.jupedsim.org/assets/images/logo.png" alt="JuPedSim Logo" width="160" style="margin-right: 40px;">
+  </a>
+  <a href="https://www.python.org/">
+    <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" alt="Python Logo" width="200">
+  </a>
 </p>
 
 # **Jupedsim Evacuation Analysis**
