@@ -102,17 +102,16 @@ sim.run()
 sim.plot_heatmap(output="heatmap.png")
 ```
 
-<p align="center">
-  <img src="figures/bottleneck_example.png" width="480" alt="Bottleneck Example">
-</p>
-
 ## Theoretical Background
+
 ### 🔹 Social Force Model
 Pedestrians are modeled as particles influenced by **attractive forces** (towards exits) and **repulsive forces** (from obstacles and others).
 
 <p align="center">
   <img src="figures/social_force_model.png" width="500" alt="Social Force Model">
 </p>
+
+---
 
 ### 🔹 Bottleneck Behavior
 When many agents attempt to pass through a narrow exit, congestion forms, reducing flow efficiency.
@@ -121,12 +120,16 @@ When many agents attempt to pass through a narrow exit, congestion forms, reduci
   <img src="figures/bottleneck_example.png" width="500" alt="Bottleneck Behavior">
 </p>
 
+---
+
 ### 🔹 Pedestrian Flow Heatmaps
 Heatmaps visualize crowd density and movement intensity to identify congestion hotspots.
 
 <p align="center">
   <img src="figures/pedestrian_heatmap.png" width="500" alt="Pedestrian Flow Heatmap">
 </p>
+
+---
 
 ### 🔹 Microscopic vs. Macroscopic Models
 - **Microscopic**: Simulates each pedestrian individually (detailed interactions).  
