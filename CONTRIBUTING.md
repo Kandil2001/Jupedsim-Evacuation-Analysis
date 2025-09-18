@@ -6,7 +6,7 @@ Thank you for considering a contribution! This project simulates pedestrian evac
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/Jupedsim-Evacuation-Analysis.git
+git clone https://github.com/Kandil2001/Jupedsim-Evacuation-Analysis.git
 cd Jupedsim-Evacuation-Analysis
 ```
 ```bash
