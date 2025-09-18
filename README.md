@@ -8,10 +8,20 @@
 </p>
 
 # **Jupedsim Evacuation Analysis**
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)  
-[![Jupedsim](https://img.shields.io/badge/JuPedSim-0.2.0-green.svg)](https://www.jupedsim.org/)  
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
-[![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange.svg)](CONTRIBUTING.md)  
+<p align="center">
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python Badge">
+  </a>
+  <a href="https://www.jupedsim.org/">
+    <img src="https://img.shields.io/badge/JuPedSim-0.2.0-green.svg" alt="JuPedSim Badge">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License Badge">
+  </a>
+  <a href="CONTRIBUTING.md">
+    <img src="https://img.shields.io/badge/Contributions-Welcome-orange.svg" alt="Contributions Badge">
+  </a>
+</p> 
 
 ## 🚨 High-performance pedestrian evacuation simulation with parallel processing & Numba acceleration
 <p align="center">
