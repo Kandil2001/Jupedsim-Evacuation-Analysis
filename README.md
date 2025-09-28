@@ -1,10 +1,13 @@
 <p align="center">
-  <a href="https://www.jupedsim.org/">
-    <img src="https://www.jupedsim.org/stable/_static/jupedsim.svg" alt="JuPedSim Logo" width="160" style="margin-right: 40px;">
-  </a>
-  <a href="https://www.python.org/">
-    <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" alt="Python Logo" width="200">
-  </a>
+  <a href="https://www.uni-wuppertal.de/en/">
+    <img src="figures/buw_logo.svg" alt="Bergische Universität Wuppertal Logo" width="220" style="margin-right: 40px;">
+  </a>
+  <a href="https://www.jupedsim.org/">
+    <img src="https://www.jupedsim.org/stable/_static/jupedsim.svg" alt="JuPedSim Logo" width="160" style="margin-right: 40px;">
+  </a>
+  <a href="https://www.python.org/">
+    <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" alt="Python Logo" width="200">
+  </a>
 </p>
 
 # **Jupedsim Evacuation Analysis**
