@@ -10,7 +10,6 @@
   </a>
 </p>
 
-
 # 🏫 HC Building Evacuation Analysis
 
 **High-performance evacuation study of the HC building using JuPedSim and Python**  
