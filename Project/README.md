@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.uni-wuppertal.de/en/">
-    <img src="figures/buw_logo_official.svg" alt="Bergische Universität Wuppertal Logo" width="220" style="margin-right: 40px;">
+    <img src="figures/buw_logo_official.svg" alt="University of Wuppertal Logo" width="220" style="margin-right: 40px;">
   </a>
   <a href="https://www.jupedsim.org/">
     <img src="https://www.jupedsim.org/stable/_static/jupedsim.svg" alt="JuPedSim Logo" width="160" style="margin-right: 40px;">
