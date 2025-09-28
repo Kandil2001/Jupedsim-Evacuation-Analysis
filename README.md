@@ -32,19 +32,19 @@
 </p>
 
 ## 📑 Table of Contents
-- [Overview](#overview)  
-- [Features](#features)  
-- [Quick Start](#quick-start)  
-- [Usage Examples](#usage-examples)  
-- [Theoretical Background](#theoretical-background)  
-- [Input & Output Formats](#input--output-formats)  
-- [Performance Benchmarks](#performance-benchmarks)  
-- [Real-World Applications](#real-world-applications)  
-- [Ethical Considerations](#ethical-considerations)  
-- [Roadmap](#roadmap)  
-- [Troubleshooting](#troubleshooting)  
-- [Contributing](#contributing)  
+- [Overview](#overview)  
+- [Features](#features)  
+- [Quick Start](#quick-start)  
+- [Usage Examples](#usage-examples)  
+- [Theoretical Background](#theoretical-background)  
+- [Input & Output Formats](#input--output-formats)  
+- [Real-World Applications](#real-world-applications)  
+- [Ethical Considerations](#ethical-considerations)  
+- [Roadmap](#roadmap)  
+- [Troubleshooting](#troubleshooting)  
+- [Contributing](#contributing)  
 - [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 This project delivers a **scalable, realistic, and lightning-fast** framework for simulating building evacuations using **JuPedSim**.  
@@ -149,12 +149,6 @@ POLYGON((0 0, 0 20, 20 20, 20 0, 0 0))
 
 Stores `(agent_id, x, y, t)` for each pedestrian at each timestep.
 
-## Performance Benchmarks
-| Agents | Duration (No Numba) | Duration (With Numba) | Speedup |
-|--------|--------------------|----------------------|---------|
-| 100    | 2.1s               | 0.8s                 | 2.6×    |
-| 1000   | 20.4s              | 6.9s                 | 2.95×   |
-
 Tested on: **Intel i7-11800H, 16GB RAM, Python 3.10**
 
 ## Real-World Applications
@@ -191,3 +185,10 @@ Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution gui
 
 ## License
 MIT License – see [LICENSE](LICENSE) for details.
+
+## Acknowledgments
+This project was developed as a practical assignment for the **Pedestrian Dynamics** at the **Bergische Universität Wuppertal**. We extend our gratitude to:
+
+* **Prof. Mohcine Chraibi** for supervision and guidance.
+* The **JuPedSim** development team for providing the powerful simulation framework.
+* The **Python** community for the essential tools and libraries (Numba, Matplotlib, etc.) that made high-performance analysis possible.
