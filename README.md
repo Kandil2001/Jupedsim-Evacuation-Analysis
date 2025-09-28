@@ -64,7 +64,7 @@ Designed for:
 📈 **Visual Outputs** – Real-time plots & post-simulation analysis
 
 <p align="center">
-  <img src="figures/heatmap.png" width="550" alt="Pedestrian Density Heatmap">
+  <img src="figures/heatmap.gif" width="550" alt="Pedestrian Density Heatmap">
 </p>
 
 ## Quick Start
