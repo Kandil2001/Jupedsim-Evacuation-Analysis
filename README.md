@@ -41,10 +41,10 @@
 - [Real-World Applications](#real-world-applications)  
 - [Ethical Considerations](#ethical-considerations)  
 - [Roadmap](#roadmap)  
-- [Troubleshooting](#troubleshooting)  
+- [Troubleshooting](#troubleshooting)
+- [Acknowledgments](#acknowledgments)  
 - [Contributing](#contributing)  
 - [License](#license)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 This project delivers a **scalable, realistic, and lightning-fast** framework for simulating building evacuations using **JuPedSim**.  
@@ -177,7 +177,14 @@ Tested on: **Intel i7-11800H, 16GB RAM, Python 3.10**
 **Q:** Output file is empty  
 **A:** Check that spawn zones and exits are correctly defined in geometry.
 
-## 🤝 Contributing
+## Acknowledgments
+This project was developed as a practical assignment for the **Pedestrian Dynamics** at the **Bergische Universität Wuppertal**. We extend our gratitude to:
+
+* **Prof. Mohcine Chraibi** for supervision and guidance.
+* The **JuPedSim** development team for providing the powerful simulation framework.
+* The **Python** community for the essential tools and libraries (Numba, Matplotlib, etc.) that made high-performance analysis possible.
+
+## Contributing
 
 We welcome contributions of all kinds — bug fixes, performance improvements, documentation updates, and new features.
 
@@ -185,10 +192,3 @@ Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution gui
 
 ## License
 MIT License – see [LICENSE](LICENSE) for details.
-
-## Acknowledgments
-This project was developed as a practical assignment for the **Pedestrian Dynamics** at the **Bergische Universität Wuppertal**. We extend our gratitude to:
-
-* **Prof. Mohcine Chraibi** for supervision and guidance.
-* The **JuPedSim** development team for providing the powerful simulation framework.
-* The **Python** community for the essential tools and libraries (Numba, Matplotlib, etc.) that made high-performance analysis possible.
