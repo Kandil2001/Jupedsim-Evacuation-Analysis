@@ -34,8 +34,7 @@
 ## 📑 Table of Contents
 - [Overview](#overview)  
 - [Features](#features)  
-- [Quick Start](#quick-start)  
-- [Usage Examples](#usage-examples)  
+- [Quick Start](#quick-start)
 - [Theoretical Background](#theoretical-background)  
 - [Input & Output Formats](#input--output-formats)  
 - [Real-World Applications](#real-world-applications)  
@@ -90,64 +89,38 @@ sim.run()
 sim.plot_heatmap()
 ```
 
-## Usage Examples
-### 1️⃣ Run a basic evacuation simulation
-
-```python
-from jupedsim import Simulation
-sim = Simulation("HC.wkt", agents=300)
-sim.run()
-```
-
-### 2️⃣ Visualize congestion heatmap
-
-```python
-sim.plot_heatmap(output="heatmap.png")
-```
-
 ## Theoretical Background
 
 ### 🔹 Social Force Model
 Pedestrians are modeled as particles influenced by **attractive forces** (towards exits) and **repulsive forces** (from obstacles and others).
+This model is a cornerstone of microscopic pedestrian dynamics simulations. For a detailed description of the model, refer to the resources at [https://pedestriandynamics.org/models/](https://pedestriandynamics.org/models/).
 
 <p align="center">
-  <img src="figures/social_force_model.png" width="500" alt="Social Force Model">
+  <img src="figures/social_force_model.png" width="500" alt="Social Force Model">
 </p>
-
 ---
 
 ### 🔹 Bottleneck Behavior
 When many agents attempt to pass through a narrow exit, congestion forms, reducing flow efficiency.
 
 <p align="center">
-  <img src="figures/bottleneck_example.png" width="500" alt="Bottleneck Behavior">
+  <img src="figures/bottleneck_example.png" width="500" alt="Bottleneck Behavior">
 </p>
-
 ---
 
 ### 🔹 Pedestrian Flow Heatmaps
 Heatmaps visualize crowd density and movement intensity to identify congestion hotspots.
 
 <p align="center">
-  <img src="figures/pedestrian_heatmap.png" width="500" alt="Pedestrian Flow Heatmap">
+  <img src="figures/pedestrian_heatmap.png" width="500" alt="Pedestrian Flow Heatmap">
 </p>
-
 ---
 
 ### 🔹 Microscopic vs. Macroscopic Models
-- **Microscopic**: Simulates each pedestrian individually (detailed interactions).  
-- **Macroscopic**: Treats crowds as continuous flows (good for large-scale analysis).  
+- **Microscopic**: Simulates each pedestrian individually (detailed interactions).  
+- **Macroscopic**: Treats crowds as continuous flows (good for large-scale analysis).  
 
-JuPedSim supports both via XML/WKT geometry definitions.
-
-## Input & Output Formats
-**Input – Building Geometry (.wkt example)**:
-
-POLYGON((0 0, 0 20, 20 20, 20 0, 0 0))
-
-**Output – Trajectories (.sqlite)**:  
-
-Stores `(agent_id, x, y, t)` for each pedestrian at each timestep.
+JuPedSim primarily uses **WKT** geometry definitions for simulation.
 
 Tested on: **Intel i7-11800H, 16GB RAM, Python 3.10**
 
@@ -178,12 +151,11 @@ Tested on: **Intel i7-11800H, 16GB RAM, Python 3.10**
 **A:** Check that spawn zones and exits are correctly defined in geometry.
 
 ## Acknowledgments
-This project was developed as a practical assignment for the **Pedestrian Dynamics** at the **Bergische Universität Wuppertal**. We extend our gratitude to:
+This project was developed as a practical assignment for the **Pedestrian Dynamics** course at the **Bergische Universität Wuppertal**. We extend our gratitude to:
 
-* **Prof. Mohcine Chraibi** for supervision and guidance.
-* The **JuPedSim** development team for providing the powerful simulation framework.
+* **Mohcine Chraibi** for supervision and guidance. His personal page is available at [https://www.chraibi.de/](https://www.chraibi.de/).
+* The **JuPedSim** development team for providing the powerful simulation framework. More information is available on the official website: [https://www.jupedsim.org/stable/](https://www.jupedsim.org/stable/).
 * The **Python** community for the essential tools and libraries (Numba, Matplotlib, etc.) that made high-performance analysis possible.
-
 ## Contributing
 
 We welcome contributions of all kinds — bug fixes, performance improvements, documentation updates, and new features.
