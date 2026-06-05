@@ -1,0 +1,7 @@
+jupyter
+jupedsim
+matplotlib
+numba
+numpy
+pedpy
+shapely
