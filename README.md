@@ -1,166 +1,107 @@
+# Pedestrian Evacuation Analysis with JuPedSim
+
 <p align="center">
-  <a href="https://www.uni-wuppertal.de/en/">
-    <img src="https://github.com/Kandil2001/Jupedsim-Evacuation-Analysis/blob/main/figures/philunet_case_logo_bergische_universitaet_wuppertal.jpg" alt="Bergische Universität Wuppertal Logo" width="220" style="margin-right: 40px;">
-  </a>
-  <a href="https://www.jupedsim.org/">
-    <img src="https://www.jupedsim.org/stable/_static/jupedsim.svg" alt="JuPedSim Logo" width="160" style="margin-right: 40px;">
-  </a>
-  <a href="https://www.python.org/">
-    <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" alt="Python Logo" width="200">
-  </a>
+  <img src="https://img.shields.io/badge/Python-3.10-blue.svg" alt="Python">
+  <img src="https://img.shields.io/badge/Simulation-JuPedSim-green.svg" alt="JuPedSim">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License">
+  <a href="https://kandil2001.github.io/">
+    <img src="https://img.shields.io/badge/Portfolio-kandil2001.github.io-2ea44f.svg" alt="Portfolio">
+  </a>
 </p>
 
-# **Jupedsim Evacuation Analysis**
-<p align="center">
-  <a href="https://www.python.org/">
-    <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python Badge">
-  </a>
-  <a href="https://www.jupedsim.org/">
-    <img src="https://img.shields.io/badge/JuPedSim-0.2.0-green.svg" alt="JuPedSim Badge">
-  </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License Badge">
-  </a>
-  <a href="CONTRIBUTING.md">
-    <img src="https://img.shields.io/badge/Contributions-Welcome-orange.svg" alt="Contributions Badge">
-  </a>
-</p> 
+This repository contains my JuPedSim-based evacuation study for a university building layout. I built it to explore how pedestrian placement, exit selection, and scenario assumptions affect evacuation behaviour and total evacuation time.
 
-## 🚨 High-performance pedestrian evacuation simulation with parallel processing & Numba acceleration
+The project uses a Jupyter notebook to define the walkable geometry, create pedestrian groups, assign exits, run the simulation, and review the resulting trajectories.
+
 <p align="center">
-  <img src="figures/demo.gif" width="700" alt="Evacuation Simulation Demo">
+  <img src="figures/demo.gif" width="760" alt="JuPedSim evacuation simulation">
 </p>
 
-## 📑 Table of Contents
-- [Overview](#overview)  
-- [Features](#features)  
-- [Quick Start](#quick-start)
-- [Theoretical Background](#theoretical-background)  
-- [Input & Output Formats](#input--output-formats)  
-- [Real-World Applications](#real-world-applications)  
-- [Ethical Considerations](#ethical-considerations)  
-- [Roadmap](#roadmap)  
-- [Troubleshooting](#troubleshooting)
-- [Acknowledgments](#acknowledgments)  
-- [Contributing](#contributing)  
-- [License](#license)
+## Main features
 
-## Overview
-This project delivers a **scalable, realistic, and lightning-fast** framework for simulating building evacuations using **JuPedSim**.  
-It combines **parallel agent distribution**, **Numba-accelerated computations**, and **efficient geometry handling** for advanced crowd analysis.  
+- Building geometry loaded from a WKT file
+- Nine manually defined exit areas
+- Configurable pedestrian spawn areas and group sizes
+- Scenario-specific exit assignments
+- Agent placement using JuPedSim distribution utilities
+- SQLite trajectory output and notebook animation
+- Runtime and evacuation-time comparison between scenarios
+- Selected setup calculations accelerated with NumPy, Numba, and `ThreadPoolExecutor`
 
-Designed for:
-- **Researchers** studying pedestrian dynamics
-- **Safety engineers** optimizing evacuation plans
-- **Urban planners** improving public space layouts
+## Study setup
 
-## Features
-🚀 **High Performance** – Parallel simulation with `ThreadPoolExecutor`  
-🔥 **Numba Acceleration** – JIT speed-ups for heavy math  
-🗺 **Flexible Geometry** – Import `.wkt` or XML building layouts  
-📊 **Detailed Analytics** – Density heatmaps, bottleneck detection, evacuation times  
-🎯 **Customizable Agents** – Adjustable speeds, behaviors, and spawn zones  
-📈 **Visual Outputs** – Real-time plots & post-simulation analysis
+The notebook represents the building as a walkable geometry and defines the exits as polygons around the available doors. Pedestrians are generated inside selected spawn areas and assigned to exits according to the active scenario.
+
+Each scenario can change:
+
+- Which spawn areas are active
+- How many pedestrians are introduced
+- Which exits are available to each group
+- Desired walking-speed parameters
+- Motivation or time-gap settings
+
+This makes it possible to compare different evacuation strategies without rebuilding the complete simulation setup.
+
+## How the simulation works
+
+The workflow in `EvacuationAnalysis.ipynb` follows these main steps:
+
+1. Load the building geometry from `HC.wkt`.
+2. Define exit and spawn polygons.
+3. Generate valid initial positions for the pedestrians.
+4. Select an exit for each pedestrian group.
+5. Configure and run the JuPedSim simulation.
+6. Save the trajectories and calculate the evacuation time.
+7. Animate and compare the scenarios.
+
+The exit-selection logic uses exit centroids and scenario-specific restrictions. Manual restrictions are included because the geometrically nearest door is not always the most sensible route inside the building.
+
+## Representative outputs
 
 <p align="center">
-  <img src="figures/heatmap.gif" width="550" alt="Pedestrian Density Heatmap">
+  <img src="figures/heatmap.gif" width="700" alt="Pedestrian movement heatmap">
 </p>
 
-## Quick Start
+The animations and plots are intended to make congestion, exit usage, and the effect of different scenario choices easier to inspect. They provide a useful comparison between cases, but they should not be interpreted as a validated safety assessment.
+
+## Running the notebook
+
+Clone the repository and open the notebook:
 
 ```bash
 git clone https://github.com/Kandil2001/Jupedsim-Evacuation-Analysis.git
 cd Jupedsim-Evacuation-Analysis
-pip install -r requirements.txt
+jupyter notebook EvacuationAnalysis.ipynb
 ```
 
-### Run in Jupyter Notebook
+The notebook requires JuPedSim, PedPy, Shapely, NumPy, Matplotlib, and Numba. Package compatibility may depend on the JuPedSim version being used.
 
-```bash
-jupyter notebook "Ped1 - Copy.ipynb"
+## Repository structure
+
+```text
+EvacuationAnalysis.ipynb   complete simulation and analysis workflow
+HC.wkt                     building geometry
+figures/                   selected animations, diagrams, and plots
+CONTRIBUTING.md             contribution notes
+LICENSE                     MIT license
 ```
 
-### Or run a Python script directly
+## Notes and limitations
 
-```python
-from jupedsim import Simulation
-sim = Simulation(geometry="HC.wkt", agents=200)
-sim.run()
-sim.plot_heatmap()
-```
+This is an educational pedestrian-dynamics study, not a certified evacuation or building-safety model.
 
-## Theoretical Background
+The current version focuses on one building geometry with manually defined exits, spawn areas, and scenario assumptions. Exit selection is based partly on centroid distance and does not calculate a globally optimal walking route through the complete geometry. The simulation has also not been calibrated against experimental evacuation data.
 
-### 🔹 Social Force Model
-Pedestrians are modeled as particles influenced by **attractive forces** (towards exits) and **repulsive forces** (from obstacles and others).
-This model is a cornerstone of microscopic pedestrian dynamics simulations. For a detailed description of the model, refer to the resources at [https://pedestriandynamics.org/models/](https://pedestriandynamics.org/models/).
-
-<p align="center">
-  <img src="figures/social_force_model.png" width="500" alt="Social Force Model">
-</p>
----
-
-### 🔹 Bottleneck Behavior
-When many agents attempt to pass through a narrow exit, congestion forms, reducing flow efficiency.
-
-<p align="center">
-  <img src="figures/bottleneck_example.png" width="500" alt="Bottleneck Behavior">
-</p>
----
-
-### 🔹 Pedestrian Flow Heatmaps
-Heatmaps visualize crowd density and movement intensity to identify congestion hotspots.
-
-<p align="center">
-  <img src="figures/pedestrian_heatmap.png" width="500" alt="Pedestrian Flow Heatmap">
-</p>
----
-
-### 🔹 Microscopic vs. Macroscopic Models
-- **Microscopic**: Simulates each pedestrian individually (detailed interactions).  
-- **Macroscopic**: Treats crowds as continuous flows (good for large-scale analysis).  
-
-JuPedSim primarily uses **WKT** geometry definitions for simulation.
-
-Tested on: **Intel i7-11800H, 16GB RAM, Python 3.10**
-
-## Real-World Applications
-🏟 **Event planning** – Stadium crowd dispersal  
-🏢 **Architecture** – Optimizing exit placements  
-🚉 **Transport hubs** – Reducing congestion  
-🏙 **Urban design** – Public space flow analysis
-
-## Ethical Considerations
-- **Privacy**: Real-world data must be anonymized  
-- **Inclusivity**: Account for individuals with varied mobility needs  
-- **Transparency**: Document assumptions and limitations of the model
-
-## Roadmap
-- [x] Parallel agent simulation
-- [x] Heatmap visualizations
-- [ ] Adaptive route choice AI
-
-## Troubleshooting
-**Q:** Simulation runs slowly  
-**A:** Ensure Numba is enabled, use Python ≥3.9, and reduce visualization frequency.
-
-**Q:** How do I change exits?  
-**A:** Edit the `.wkt` file to define new exit polygons.
-
-**Q:** Output file is empty  
-**A:** Check that spawn zones and exits are correctly defined in geometry.
+Useful next steps would include path-based exit selection, systematic sensitivity studies, additional building layouts, and validation against measured pedestrian-flow data.
 
 ## Acknowledgments
-This project was developed as a practical assignment for the **Pedestrian Dynamics** course at the **Bergische Universität Wuppertal**. We extend our gratitude to:
 
-* **Mohcine Chraibi** for supervision and guidance. His personal page is available at [https://www.chraibi.de/](https://www.chraibi.de/).
-* The **JuPedSim** development team for providing the powerful simulation framework. More information is available on the official website: [https://www.jupedsim.org/stable/](https://www.jupedsim.org/stable/).
-* The **Python** community for the essential tools and libraries (Numba, Matplotlib, etc.) that made high-performance analysis possible.
-## Contributing
+This project was developed for the Pedestrian Dynamics course at Bergische Universität Wuppertal.
 
-We welcome contributions of all kinds — bug fixes, performance improvements, documentation updates, and new features.
+Thanks to **Mohcine Chraibi** for his supervision and guidance, and to the JuPedSim development team for providing the simulation framework.
 
-Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelines, coding standards, and workflow instructions before submitting a pull request.
+## Author
 
-## License
-MIT License – see [LICENSE](LICENSE) for details.
+Ahmed Kandil — [Portfolio](https://kandil2001.github.io/) · [GitHub](https://github.com/Kandil2001) · [LinkedIn](https://www.linkedin.com/in/ahmed-kandil03/)
+
+Released under the [MIT License](LICENSE).
