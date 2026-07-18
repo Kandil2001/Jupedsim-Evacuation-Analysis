@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software or study in academic work, please cite it using this metadata."
+title: "Pedestrian Evacuation Analysis with JuPedSim"
+type: software
+authors:
+  - family-names: Kandil
+    given-names: Ahmed
+    orcid: "https://orcid.org/0009-0007-2724-4565"
+repository-code: "https://github.com/Kandil2001/Jupedsim-Evacuation-Analysis"
+url: "https://kandil2001.github.io/projects/pedestrian-simulation.html"
+license: MIT
+keywords:
+  - pedestrian dynamics
+  - evacuation simulation
+  - JuPedSim
+  - Python
+  - trajectory analysis
