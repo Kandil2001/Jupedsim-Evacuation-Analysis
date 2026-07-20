@@ -2,11 +2,14 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Completed-brightgreen.svg" alt="Completed">
-  <img src="https://img.shields.io/badge/Python-3.10-blue.svg" alt="Python">
+  <img src="https://img.shields.io/badge/Python-3.12.8-blue.svg" alt="Python 3.12.8">
   <img src="https://img.shields.io/badge/Simulation-JuPedSim-green.svg" alt="JuPedSim">
+  <a href="https://github.com/Kandil2001/Jupedsim-Evacuation-Analysis/actions/workflows/environment-check.yml">
+    <img src="https://github.com/Kandil2001/Jupedsim-Evacuation-Analysis/actions/workflows/environment-check.yml/badge.svg" alt="Pinned environment compatibility">
+  </a>
   <img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="MIT License">
-  <a href="https://kandil2001.github.io/">
-    <img src="https://img.shields.io/badge/Portfolio-kandil2001.github.io-2ea44f.svg" alt="Portfolio">
+  <a href="https://kandil2001.github.io/projects/pedestrian-simulation.html">
+    <img src="https://img.shields.io/badge/Portfolio-Case%20Study-2ea44f.svg" alt="Portfolio case study">
   </a>
 </p>
 
@@ -58,6 +61,19 @@ The workflow in `EvacuationAnalysis.ipynb`:
 
 The exit-assignment logic uses exit centroids together with scenario-specific restrictions. The geometrically nearest door is not always the most sensible route through the building, so the restrictions encode the assumptions of each scenario.
 
+## Reproducible environment
+
+The notebook metadata records Python `3.12.8`. The repository now provides a current reproducibility baseline established on 20 July 2026:
+
+- `.python-version` records Python `3.12.8`
+- `requirements.txt` pins the top-level notebook packages
+- GitHub Actions installs the pinned environment and runs `pip check`
+- `scripts/check_environment.py` verifies exact package versions and exercises the notebook's JuPedSim, PedPy, Shapely, NumPy, Numba, SQLite-writer, and distribution APIs
+
+This baseline is not claimed to reproduce the original development machine byte for byte. It establishes a documented environment that can be tested continuously from the current repository state.
+
+The automated check does not execute all six evacuation scenarios. It performs a small compatibility simulation so dependency or API breakage is detected without turning CI into a long production run.
+
 ## Running the notebook
 
 ```bash
@@ -65,19 +81,29 @@ git clone https://github.com/Kandil2001/Jupedsim-Evacuation-Analysis.git
 cd Jupedsim-Evacuation-Analysis
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -m pip check
+python scripts/check_environment.py
 jupyter notebook EvacuationAnalysis.ipynb
 ```
 
-Package compatibility depends on the installed JuPedSim and PedPy versions. The current `requirements.txt` records the required packages but is not a locked environment file.
+On Windows PowerShell, activate the environment with:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
 
 ## Repository structure
 
 ```text
-EvacuationAnalysis.ipynb   simulation and analysis workflow
-HC.wkt                     building geometry
-requirements.txt           Python dependencies
-figures/                   selected animation used in the README
+EvacuationAnalysis.ipynb          simulation and analysis workflow
+HC.wkt                            building geometry
+.python-version                   recorded notebook Python version
+requirements.txt                  pinned top-level environment
+scripts/check_environment.py      dependency and API compatibility smoke test
+.github/workflows/                automated environment verification
+figures/                           selected animation used in the README
 ```
 
 ## Scope and limitations
