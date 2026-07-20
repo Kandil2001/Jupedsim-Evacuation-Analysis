@@ -11,6 +11,7 @@ import matplotlib
 import numba
 import numpy as np
 import pedpy
+import plotly
 import shapely
 from jupedsim.internal.notebook_utils import animate, read_sqlite_file  # noqa: F401
 from shapely.geometry import Polygon
@@ -23,6 +24,7 @@ EXPECTED_VERSIONS = {
     "numba": "0.66.0",
     "numpy": "2.4.6",
     "pedpy": "1.5.0",
+    "plotly": "6.9.0",
     "shapely": "2.1.2",
 }
 
@@ -77,10 +79,11 @@ def check_jupedsim_api() -> None:
 
     with tempfile.TemporaryDirectory() as temporary_directory:
         trajectory_file = Path(temporary_directory) / "smoke.sqlite"
+        writer = jps.SqliteTrajectoryWriter(output_file=trajectory_file)
         simulation = jps.Simulation(
             model=jps.CollisionFreeSpeedModel(),
             geometry=geometry,
-            trajectory_writer=jps.SqliteTrajectoryWriter(output_file=trajectory_file),
+            trajectory_writer=writer,
         )
         exit_id = simulation.add_exit_stage(exit_area)
         journey_id = simulation.add_journey(jps.JourneyDescription([exit_id]))
@@ -97,7 +100,7 @@ def check_jupedsim_api() -> None:
         for _ in range(5):
             simulation.iterate()
 
-        simulation._writer.close()
+        writer.close()
         if simulation.delta_time() <= 0.0:
             raise SystemExit("JuPedSim returned an invalid time step.")
         if not trajectory_file.is_file() or trajectory_file.stat().st_size == 0:
@@ -106,6 +109,7 @@ def check_jupedsim_api() -> None:
 
 def main() -> None:
     matplotlib.use("Agg")
+    _ = plotly.__version__
     check_versions()
     check_notebook_metadata()
     check_numba()
