@@ -1,0 +1,39 @@
+name: Pinned environment compatibility
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  environment-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up notebook Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: .python-version
+          cache: pip
+
+      - name: Install pinned environment
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          python -m pip check
+
+      - name: Validate notebook JSON and compatibility APIs
+        env:
+          MPLBACKEND: Agg
+        run: |
+          python -m json.tool EvacuationAnalysis.ipynb > /dev/null
+          python scripts/check_environment.py
