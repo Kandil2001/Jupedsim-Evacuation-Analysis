@@ -1,7 +1,9 @@
-jupyter
-jupedsim
-matplotlib
-numba
-numpy
-pedpy
-shapely
+# Reproducibility baseline established 2026-07-20 for Python 3.12.8.
+# These are the top-level packages used directly by the notebook.
+jupyter==1.1.1
+jupedsim==1.4.2
+matplotlib==3.11.1
+numba==0.66.0
+numpy==2.4.6
+pedpy==1.5.0
+shapely==2.1.2
